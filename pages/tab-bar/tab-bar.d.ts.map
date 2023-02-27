@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/tab-bar/tab-bar.ts"],"names":[],"mappings":"","file":"tab-bar.d.ts","sourcesContent":["Page({\n  data: {\n    value: 'label_1',\n  },\n  onChange(event) {\n    console.log(event.detail);\n  },\n});\n"]}

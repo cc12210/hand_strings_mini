@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/transition/index.ts"],"names":[],"mappings":"AAAA,cAAc,SAAS,CAAC;AACxB,cAAc,QAAQ,CAAC","file":"index.d.ts","sourcesContent":["export * from './props';\nexport * from './type';\n"]}

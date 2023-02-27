@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/home/data/index.ts"],"names":[],"mappings":";;;;;;;;AAMA,wBAA8C","file":"index.d.ts","sourcesContent":["import base from './base';\nimport nav from './nav';\nimport display from './display';\nimport form from './form';\nimport ux from './ux';\n\nexport default [base, nav, form, display, ux];\n"]}

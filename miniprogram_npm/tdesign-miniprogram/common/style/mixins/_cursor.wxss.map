@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["common/style/mixins/_cursor.less"],"sourcesContent":[".cursor-pointer() {\n  cursor: pointer;\n  -webkit-tap-highlight-color: transparent;\n  -webkit-user-select: none;\n  user-select: none;\n}\n"],"file":"_cursor.wxss"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/avatar/avatar.less"],"names":[],"mappings":"AAAA;EACE,gBAAA;;AAGF;EACE,eAAA;;AAEF;EACE,mBAAA;EACA,WAAA;EACA,gBAAA;EACA,kBAAA","sourcesContent":["page {\n  background: #fff;\n}\n\n.demo-avatar {\n  margin: 0 32rpx;\n}\n.desc {\n  margin: 10rpx 32rpx;\n  color: #999;\n  font-size: 26rpx;\n  line-height: 36rpx;\n}\n"],"file":"avatar.wxss"}

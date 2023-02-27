@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/progress/progress.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;;AAGF;EACE,iBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n\n.t-progress {\n  margin-top: 32rpx;\n}\n"],"file":"progress.wxss"}

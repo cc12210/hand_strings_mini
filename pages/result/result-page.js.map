@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/result/result-page.ts"],"names":[],"mappings":"AAAA,IAAI,CAAC;IACH,MAAM;QACJ,EAAE,CAAC,YAAY,CAAC,EAAE,KAAK,EAAE,CAAC,EAAE,CAAC,CAAC;IAChC,CAAC;CACF,CAAC,CAAC","file":"result-page.js","sourcesContent":["Page({\n  goBack() {\n    wx.navigateBack({ delta: 1 });\n  },\n});\n"]}

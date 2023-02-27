@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/notice-bar/notice-bar.ts"],"names":[],"mappings":"","file":"notice-bar.d.ts","sourcesContent":["Page({\n  onReady() {\n    /**\n     * notice-bar组件的滚动动画依赖自身样式数据。\n     * 页面中有多个滚动notice-bar时，建议用wx:if手动控制，需要显示时渲染组件，保证组件能够成功初始化。\n     * */\n  },\n});\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/home/navigateFail/navigateFail.ts"],"names":[],"mappings":"","file":"navigateFail.d.ts","sourcesContent":["Page({\n  data: {\n    failImage: 'error-circle-filled',\n  },\n\n  toHome() {\n    wx.reLaunch({\n      url: '/pages/home/home',\n    });\n  },\n});\n"]}

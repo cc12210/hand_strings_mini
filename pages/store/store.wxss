@@ -1,0 +1,7 @@
+/* pages/store/store.wxss */
+
+/* 商店首页初始样式 */
+.store-page-container {
+    box-sizing: border-box;
+    padding: 20rpx;
+}

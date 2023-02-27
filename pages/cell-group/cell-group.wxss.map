@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/cell-group/cell-group.less"],"names":[],"mappings":"AAAA,IAEE;EACE,mBAAA;EACA,gBAAA","sourcesContent":["page {\n  // 覆盖t-cell-group组件内部样式\n  .t-cell-group__title {\n    line-height: 104rpx;\n    font-size: 24rpx;\n  }\n}\n"],"file":"cell-group.wxss"}

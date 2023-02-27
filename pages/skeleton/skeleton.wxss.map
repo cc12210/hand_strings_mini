@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/skeleton/skeleton.less"],"names":[],"mappings":"AAAA;EACE,sBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n"],"file":"skeleton.wxss"}

@@ -1,0 +1,191 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { SuperComponent, wxComponent } from '../common/src/index';
+import config from '../common/config';
+import props from './props';
+import { getRect, unitConvert, calcIcon } from '../common/utils';
+const { prefix } = config;
+const name = `${prefix}-message`;
+// 展示动画持续时间
+const SHOW_DURATION = 500;
+let Message = class Message extends SuperComponent {
+    constructor() {
+        super(...arguments);
+        this.externalClasses = [
+            `${prefix}-class`,
+            `${prefix}-class-content`,
+            `${prefix}-class-icon`,
+            `${prefix}-class-action`,
+            `${prefix}-class-close-btn`,
+        ];
+        this.options = {
+            styleIsolation: 'apply-shared',
+            multipleSlots: true,
+        };
+        // 组件的对外属性
+        this.properties = Object.assign({}, props);
+        // 组件的内部数据
+        this.data = {
+            prefix,
+            classPrefix: name,
+            loop: -1,
+            animation: [],
+            showAnimation: [],
+            wrapTop: -999, // 初始定位，保证在可视区域外。
+        };
+        this.observers = {
+            marquee(val) {
+                if (JSON.stringify(val) === '{}') {
+                    this.setData({
+                        marquee: {
+                            speed: 50,
+                            loop: -1,
+                            delay: 5000,
+                        },
+                    });
+                }
+            },
+            icon(v) {
+                this.setData({
+                    _icon: calcIcon(v, 'error-circle-filled'),
+                });
+            },
+            closeBtn(v) {
+                this.setData({
+                    _closeBtn: calcIcon(v, 'close'),
+                });
+            },
+        };
+        /** 延时关闭句柄 */
+        this.closeTimeoutContext = 0;
+        /** 动画句柄 */
+        this.nextAnimationContext = 0;
+        this.resetAnimation = wx.createAnimation({
+            duration: 0,
+            timingFunction: 'linear',
+        });
+    }
+    ready() {
+        this.memoInitalData();
+    }
+    /** 记录组件设置的项目 */
+    memoInitalData() {
+        this.initalData = Object.assign(Object.assign({}, this.properties), this.data);
+    }
+    resetData(cb) {
+        this.setData(Object.assign({}, this.initalData), cb);
+    }
+    detached() {
+        this.clearMessageAnimation();
+    }
+    /** 检查是否需要开启一个新的动画循环 */
+    checkAnimation() {
+        if (!this.properties.marquee) {
+            return;
+        }
+        const speeding = this.properties.marquee.speed;
+        if (this.data.loop > 0) {
+            this.data.loop -= 1;
+        }
+        else if (this.data.loop === 0) {
+            // 动画回到初始位置
+            this.setData({ animation: this.resetAnimation.translateX(0).step().export() });
+            return;
+        }
+        if (this.nextAnimationContext) {
+            this.clearMessageAnimation();
+        }
+        const warpID = `#${name}__text-wrap`;
+        const nodeID = `#${name}__text`;
+        Promise.all([getRect(this, nodeID), getRect(this, warpID)]).then(([nodeRect, wrapRect]) => {
+            this.setData({
+                animation: this.resetAnimation.translateX(wrapRect.width).step().export(),
+            }, () => {
+                const durationTime = ((nodeRect.width + wrapRect.width) / speeding) * 1000;
+                const nextAnimation = wx
+                    .createAnimation({
+                    // 默认50px/s
+                    duration: durationTime,
+                })
+                    .translateX(-nodeRect.width)
+                    .step()
+                    .export();
+                // 这里就只能用 setTimeout/20, nextTick 没用
+                // 不用这个的话会出现reset动画没跑完就开始跑这个等的奇怪问题
+                setTimeout(() => {
+                    this.nextAnimationContext = setTimeout(this.checkAnimation.bind(this), durationTime);
+                    this.setData({ animation: nextAnimation });
+                }, 20);
+            });
+        });
+    }
+    /** 清理动画循环 */
+    clearMessageAnimation() {
+        clearTimeout(this.nextAnimationContext);
+        this.nextAnimationContext = 0;
+    }
+    show() {
+        const { duration, marquee, offset } = this.properties;
+        this.setData({ visible: true, loop: marquee.loop });
+        this.reset();
+        this.checkAnimation();
+        if (duration && duration > 0) {
+            this.closeTimeoutContext = setTimeout(() => {
+                this.hide();
+                this.triggerEvent('durationEnd', { self: this });
+            }, duration);
+        }
+        const wrapID = `#${name}`;
+        getRect(this, wrapID).then((wrapRect) => {
+            // 入场动画。先根据 message 的实际高度设置绝对定位的 top 值，再开始显示动画
+            this.setData({ wrapTop: -wrapRect.height }, () => {
+                this.setData({
+                    showAnimation: wx
+                        .createAnimation({ duration: SHOW_DURATION, timingFunction: 'ease' })
+                        .translateY(wrapRect.height + unitConvert(offset[0]))
+                        .step()
+                        .export(),
+                });
+            });
+        });
+    }
+    hide() {
+        this.reset();
+        this.setData({
+            // 出场动画
+            showAnimation: wx
+                .createAnimation({ duration: SHOW_DURATION, timingFunction: 'ease' })
+                .translateY(this.data.wrapTop)
+                .step()
+                .export(),
+        });
+        setTimeout(() => {
+            this.setData({ visible: false, animation: [] });
+        }, SHOW_DURATION);
+    }
+    // 重置定时器
+    reset() {
+        if (this.nextAnimationContext) {
+            this.clearMessageAnimation();
+        }
+        clearTimeout(this.closeTimeoutContext);
+        this.closeTimeoutContext = 0;
+    }
+    handleClose() {
+        this.hide();
+        this.triggerEvent('closeBtnClick');
+    }
+    handleBtnClick() {
+        this.triggerEvent('actionBtnClick', { self: this });
+    }
+};
+Message = __decorate([
+    wxComponent()
+], Message);
+export default Message;
+
+//# sourceMappingURL=message.js.map

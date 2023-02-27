@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/result/result.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;;AADF,IAGE;EACE,gBAAA","sourcesContent":["page {\n  background-color: #fff;\n\n  .demo-section__wrapper {\n    padding: 0 32rpx;\n  }\n}\n"],"file":"result.wxss"}

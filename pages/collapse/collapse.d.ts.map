@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/collapse/collapse.ts"],"names":[],"mappings":"","file":"collapse.d.ts","sourcesContent":["Page({\n  data: {\n    activeValues: [0],\n  },\n  handleChange(e) {\n    this.setData({\n      activeValues: e.detail.value,\n    });\n  },\n});\n"]}

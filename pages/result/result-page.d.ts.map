@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/result/result-page.ts"],"names":[],"mappings":"","file":"result-page.d.ts","sourcesContent":["Page({\n  goBack() {\n    wx.navigateBack({ delta: 1 });\n  },\n});\n"]}

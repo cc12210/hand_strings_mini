@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/loading/loading.ts"],"names":[],"mappings":"AAAA,IAAI,CAAC;IACH,YAAY;QACV,EAAE,CAAC,UAAU,CAAC;YACZ,GAAG,EAAE,sCAAsC;SAC5C,CAAC,CAAC;IACL,CAAC;CACF,CAAC,CAAC","file":"loading.js","sourcesContent":["Page({\n  goToProgress() {\n    wx.redirectTo({\n      url: '/pages/loading/loadingProgress/index',\n    });\n  },\n});\n"]}

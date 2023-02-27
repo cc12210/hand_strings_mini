@@ -1,0 +1,96 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "scopeDataCheck": false,
+        "coverView": true,
+        "es6": true,
+        "postcss": true,
+        "compileHotReLoad": false,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "autoAudits": false,
+        "newFeature": true,
+        "uglifyFileName": false,
+        "uploadWithSourceMap": true,
+        "useIsolateContext": true,
+        "nodeModules": true,
+        "enhance": false,
+        "useCompilerModule": true,
+        "userConfirmedUseCompilerModuleSwitch": false,
+        "showShadowRootInWxmlPanel": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        }
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.20.2",
+    "appid": "wx853c4bbaec5bbc32",
+    "projectname": "TDesign",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "button",
+                    "pathName": "pages/button/button",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "rate",
+                    "pathName": "pages/rate/rate",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "indexes",
+                    "pathName": "pages/indexes/indexes",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "swiper",
+                    "pathName": "pages/swiper/swiper",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "actionSheet",
+                    "pathName": "pages/action-sheet/action-sheet",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "image-viewer",
+                    "pathName": "pages/image-viewer/image-viewer",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "search",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "checkbox",
+                    "pathName": "pages/checkbox/checkbox",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    }
+}

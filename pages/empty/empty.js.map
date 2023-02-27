@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/pages/empty/empty.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,IAAI,CAAC,EAAE,CAAC,CAAC","file":"empty.js","sourcesContent":["/*\n * @Author: shiyanzhang\n * @Date: 2021-08-24 15:56:07\n * @Description:\n * @FilePath: /tdesign-miniprogram/example/pages/empty/empty.ts\n */\nPage({});\n"]}

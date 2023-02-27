@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../example/app.ts"],"names":[],"mappings":"","file":"app.d.ts","sourcesContent":["import gulpError from './utils/gulpError';\n\nApp({\n  onShow() {\n    if (gulpError !== 'gulpErrorPlaceHolder') {\n      wx.redirectTo({\n        url: `/pages/gulp-error/index?gulpError=${gulpError}`,\n      });\n    }\n  },\n});\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/action-sheet/action-sheet.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;;AADF,IAGE;EACE,iBAAA","sourcesContent":["page {\n  background-color: #fff;\n\n  .t-button {\n    margin-top: 32rpx;\n  }\n}\n"],"file":"action-sheet.wxss"}

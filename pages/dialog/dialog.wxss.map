@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/dialog/dialog.less"],"names":[],"mappings":"AAAA;EACE,sBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n"],"file":"dialog.wxss"}

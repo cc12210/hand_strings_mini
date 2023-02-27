@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/message/message.less"],"names":[],"mappings":"AAAA;EACE,gBAAA;;AAGF;EACE,gBAAA","sourcesContent":["page {\n  background: #fff;\n}\n\n.demo-block__oper {\n  padding: 0 32rpx;\n}\n"],"file":"message.wxss"}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/steps/steps.less"],"names":[],"mappings":"AAAA;EACE,kBAAA;;AAGF;EACE,qBAAA;EACA,iBAAA;;AAEA,MAAE;EACA,iBAAA","sourcesContent":[".demo-steps {\n  padding-top: 80rpx;\n}\n\n.group {\n  padding-bottom: 80rpx;\n  margin-top: 32rpx;\n\n  & + .demo-section__desc {\n    margin-top: 32rpx;\n  }\n}\n"],"file":"steps.wxss"}

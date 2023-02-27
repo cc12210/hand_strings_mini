@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/notice-bar/notice-bar.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;;AAGF;EACE,oBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n\n.t-notice-bar {\n  margin-bottom: 32rpx;\n}\n"],"file":"notice-bar.wxss"}
