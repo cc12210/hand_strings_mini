@@ -3,5 +3,73 @@
     "projectname": "%E6%85%A7%E6%9E%9C%E6%89%8B%E5%B7%A5%E6%89%8B%E4%B8%B2",
     "setting": {
         "compileHotReLoad": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "button",
+                    "pathName": "pages/button/button",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "rate",
+                    "pathName": "pages/rate/rate",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "indexes",
+                    "pathName": "pages/indexes/indexes",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "swiper",
+                    "pathName": "pages/swiper/swiper",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "actionSheet",
+                    "pathName": "pages/action-sheet/action-sheet",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "image-viewer",
+                    "pathName": "pages/image-viewer/image-viewer",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "search",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "checkbox",
+                    "pathName": "pages/checkbox/checkbox",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/slider/slider",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/side-bar/base/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
     }
 }

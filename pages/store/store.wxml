@@ -14,7 +14,7 @@
         <view class="store-info-bottom">沧海月明珠有泪，蓝田日暖玉生烟。</view>
       </view>
     </view>
-      <!-- 右侧显示好友二维码 -->
+    <!-- 右侧显示好友二维码 -->
     <view class="store-page-right">
       <view class="store-right-erweima">
         <image class="erweima-right-icon" src="http://image.unknown-host.com/hand_strings/erweima.png" />
@@ -25,12 +25,30 @@
 
   <!-- 内容区域 -->
   <view class="store-page-content">
-  <!-- 内容区域 -->
+    <!-- 内容区域 -->
     <view class="store-content-container">
       <view class="content-container-top">
-      <!-- 提示信息 -->
+        <!-- 提示信息 -->
         <view class="content-top-tips"></view>
 
+      </view>
+
+      <view class="store-show-list">
+
+        <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+          <t-side-bar-item wx:for="{{categories}}" wx:key="index" value="{{item.value || index}}" label="{{item.label}}" badge-props="{{item.badgeProps}}" />
+        </t-side-bar>
+        <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" bind:scroll="onScroll">
+          <view wx:for="{{categories}}" wx:key="index" class="section">
+            <view class="title">{{item.title || item.label}}</view>
+            <t-grid column="{{3}}" border="{{false}}">
+              <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
+                <t-grid-item text="{{cargo.label}}" image="{{cargo.image}}" image-props="{{ { shape: 'round', lazy: true } }}">
+                </t-grid-item>
+              </block>
+            </t-grid>
+          </view>
+        </scroll-view>
       </view>
     </view>
   </view>
