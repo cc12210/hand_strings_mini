@@ -138,3 +138,10 @@
   width: 96rpx;
   height: 96rpx;
 }
+
+.title-store-show {
+    margin-left: 40rpx;
+    margin-top: 20rpx;
+    font-weight: bold;
+    font-size: 30rpx;
+}
