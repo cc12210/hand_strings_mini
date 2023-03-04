@@ -1,55 +1,67 @@
 <!--pages/store/store.wxml-->
 <view class="store-page-container">
-  <!-- 顶部头像区域 -->
-  <view class="store-page-top">
-    <view class="store-page-top-background"></view>
-    <view class="store-page-left">
-      <!-- 头像区域 -->
-      <view class="store-left-profile">
-        <image class="store-profile-image" src="http://image.unknown-host.com/hand_strings/huiguo_avatar.jpg" />
-      </view>
-      <!-- 名称区域 -->
-      <view class="store-left-info">
-        <view class="store-info-top">慧果手工手串</view>
-        <view class="store-info-bottom">沧海月明珠有泪，蓝田日暖玉生烟。</view>
-      </view>
+    <!-- 顶部头像区域 -->
+    <view class="store-page-top">
+        <view class="store-page-top-background"></view>
+        <view class="store-page-left">
+            <!-- 头像区域 -->
+            <view class="store-left-profile">
+                <image class="store-profile-image" src="http://image.unknown-host.com/hand_strings/huiguo_avatar.jpg" />
+            </view>
+            <!-- 名称区域 -->
+            <view class="store-left-info">
+                <view class="store-info-top">慧果手工手串</view>
+                <view class="store-info-bottom">沧海月明珠有泪，蓝田日暖玉生烟。</view>
+            </view>
+        </view>
+        <!-- 右侧显示好友二维码 -->
+        <view class="store-page-right">
+            <view class="store-right-erweima">
+                <image class="erweima-right-icon" src="http://image.unknown-host.com/hand_strings/erweima.png" />
+                <view class="erweima-right-text">加我好友</view>
+            </view>
+        </view>
     </view>
-    <!-- 右侧显示好友二维码 -->
-    <view class="store-page-right">
-      <view class="store-right-erweima">
-        <image class="erweima-right-icon" src="http://image.unknown-host.com/hand_strings/erweima.png" />
-        <view class="erweima-right-text">加我好友</view>
-      </view>
-    </view>
-  </view>
 
-  <!-- 内容区域 -->
-  <view class="store-page-content">
     <!-- 内容区域 -->
-    <view class="store-content-container">
-      <view class="content-container-top">
-        <!-- 提示信息 -->
-        <view class="content-top-tips"></view>
+    <view class="store-page-content">
+        <!-- 内容区域 -->
+        <view class="store-content-container">
+            <view class="content-container-top">
+                <!-- 提示信息 -->
+                <view class="content-top-tips"></view>
 
-      </view>
+            </view>
 
-      <view class="store-show-list">
+            <view class="store-show-list">
 
-        <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
-          <t-side-bar-item wx:for="{{categories}}" wx:key="index" value="{{item.value || index}}" label="{{item.label}}" badge-props="{{item.badgeProps}}" />
-        </t-side-bar>
-        <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" bind:scroll="onScroll">
-          <view wx:for="{{categories}}" wx:key="index" class="section">
-            <view class="title title-store-show">{{item.title || item.label}}</view>
-            <t-grid column="{{3}}" border="{{false}}">
-              <block wx:for="{{item.children}}" wx:key="index" wx:for-item="cargo">
-                <t-grid-item text="{{cargo.label}}" image="{{cargo.image}}" image-props="{{ { shape: 'round', lazy: true, mode: 'aspectFill' } }}">
-                </t-grid-item>
-              </block>
-            </t-grid>
-          </view>
-        </scroll-view>
-      </view>
+                <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+                    <t-side-bar-item wx:for="{{categories}}" wx:key="index" value="{{item.value || index}}" label="{{item.label}}" badge-props="{{item.badgeProps}}" />
+                </t-side-bar>
+                <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}" bind:scroll="onScroll">
+                    <view wx:for="{{categories}}" wx:key="index" class="section">
+                        <view class="title title-store-show">{{item.title || item.label}}</view>
+
+                        <!-- <view class="store-image-list">
+                            <block wx:for="{{item.children}}" wx:key="index" wx:for-item="cargo">
+                                <view class="store-image-item">
+                                    <image src="{{item.image}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view> -->
+
+                        <t-grid t-class="store-grid-container" column="{{3}}" border="{{false}}" hover="{{true}}" >
+                            <block wx:for="{{item.children}}" wx:key="index" wx:for-item="cargo">
+                                <view class="store-image-item">
+                                    <image class="store-image-container" src="{{cargo.image}}" mode="aspectFill" />
+                                </view>
+                                <!-- <t-grid-item text="{{cargo.label}}" image="{{cargo.image}}" image-props="{{ { shape: 'round', lazy: true, mode: 'aspectFill' } }}">
+                                </t-grid-item> -->
+                            </block>
+                        </t-grid>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
     </view>
-  </view>
 </view>
