@@ -60,6 +60,9 @@ Page({
       })
       .exec();
   },
+  onShareAppMessage() {
+
+  },
   onScroll(e) {
     const {
       scrollTop
