@@ -53,7 +53,7 @@
             <t-grid t-class="store-grid-container" column="{{3}}" border="{{false}}" hover="{{true}}">
               <block wx:for="{{item.children}}" wx:key="index" wx:for-item="cargo">
                 <view bindtap="perviewImage" data-urls="{{item.children}}" data-current="{{cargo.image}}" class="store-image-item">
-                  <image class="store-image-container" src="{{cargo.image}}" mode="aspectFill" />
+                  <image class="store-image-container" src="{{cargo.image}}" mode="aspectFill" 	lazy-load="{{true}}" />
                 </view>
                 <!-- <t-grid-item text="{{cargo.label}}" image="{{cargo.image}}" image-props="{{ { shape: 'round', lazy: true, mode: 'aspectFill' } }}">
                                 </t-grid-item> -->
