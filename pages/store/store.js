@@ -12,6 +12,10 @@ Page({
     infoJson: [],
   },
   onLoad() {
+    wx.showShareMenu({
+      withShareTicket: true,
+      menus: ['shareAppMessage', 'shareTimeline']
+    })
     // console.log(JSON.stringify(this.data.infoDetails))
     // console.log(JSON.stringify(this.data.categories))
     // console.log(JSON.stringify(this.data.infoJson))
