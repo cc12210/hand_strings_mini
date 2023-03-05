@@ -50,7 +50,7 @@
                             </block>
                         </view> -->
 
-                        <t-grid t-class="store-grid-container" column="{{3}}" border="{{false}}" hover="{{true}}" >
+                        <t-grid t-class="store-grid-container" column="{{3}}" border="{{false}}" hover="{{true}}">
                             <block wx:for="{{item.children}}" wx:key="index" wx:for-item="cargo">
                                 <view class="store-image-item">
                                     <image class="store-image-container" src="{{cargo.image}}" mode="aspectFill" />
@@ -64,4 +64,11 @@
             </view>
         </view>
     </view>
+
+    <!-- 个人弹层 -->
+    <t-popup visible="{{showPersonInfo}}" placement="bottom">
+        <view class="details-info-popup">
+            测试
+        </view>
+    </t-popup>
 </view>

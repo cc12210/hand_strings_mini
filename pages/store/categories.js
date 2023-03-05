@@ -266,3 +266,10 @@ export const categories = [{
         ]
     }
 ]
+
+export const infoJson = [
+    {
+        label: "微信号",
+        value: "Q1942949",
+    },
+]

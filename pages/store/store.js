@@ -3,9 +3,11 @@ const cateList = require('./categories')
 Page({
   offsetTopList: [],
   data: {
+    showPersonInfo: false,
     sideBarIndex: 1,
     scrollTop: 0,
     categories: cateList.categories,
+    infoJson: cateList.infoJson,
   },
   onLoad() {
     const query = wx.createSelectorQuery().in(this);
