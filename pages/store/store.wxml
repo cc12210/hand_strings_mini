@@ -87,7 +87,7 @@
   <!-- 加我好友 -->
   <t-popup visible="{{showAddFriend}}" placement="center" close-btn="{{false}}" bind:visible-change="onAddFriendChange">
     <view class="add-friend-block">
-      <image class="add-friend-image" src="{{infoDetails.addFriendImage}}"></image>
+      <image show-menu-by-longpress="{{true}}" class="add-friend-image" src="{{infoDetails.addFriendImage}}"></image>
     </view>
   </t-popup>
 </view>
