@@ -267,9 +267,16 @@ export const categories = [{
     }
 ]
 
-export const infoJson = [
-    {
-        label: "微信号",
-        value: "Q1942949",
-    },
-]
+export const infoDetails = {
+    miniTitle: "慧果手工手串",
+    miniIntro: "沧海月明珠有泪，蓝田日暖玉生烟。",
+    headPic: "http://image.unknown-host.com/hand_strings/huiguo_avatar.jpg",
+    wechatName: "是邱邱吖℘࿐",
+    introTips: "漂亮的手工手串欢迎挑选",
+    addFriendImage: "http://image.unknown-host.com/hand_strings/add-me-erweima.jpg"
+}
+
+export const infoJson = [{
+    label: "微信号",
+    value: "Q1942949",
+}, ]
