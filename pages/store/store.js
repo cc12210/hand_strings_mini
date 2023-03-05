@@ -1,4 +1,4 @@
-const cateList = require('./categories')
+// const cateList = require('./categories')
 
 Page({
   offsetTopList: [],
@@ -7,19 +7,16 @@ Page({
     showAddFriend: false,
     sideBarIndex: 1,
     scrollTop: 0,
-    infoDetails: cateList.infoDetails,
-    categories: cateList.categories,
-    infoJson: cateList.infoJson,
+    infoDetails: [],
+    categories: [],
+    infoJson: [],
   },
   onLoad() {
-    const query = wx.createSelectorQuery().in(this);
+    // console.log(JSON.stringify(this.data.infoDetails))
+    // console.log(JSON.stringify(this.data.categories))
+    // console.log(JSON.stringify(this.data.infoJson))
 
-    query
-      .selectAll('.title')
-      .boundingClientRect((rects) => {
-        this.offsetTopList = rects.map((item) => item.top);
-      })
-      .exec();
+    this.getCategories()
   },
   onSideBarChange(e) {
     const {
@@ -30,6 +27,38 @@ Page({
       sideBarIndex: value,
       scrollTop: this.offsetTopList[value]
     });
+  },
+  // 获取用户信息
+  getCategories() {
+    console.log('test')
+    wx.request({
+      url: 'https://unknown-host.com/api/categories',
+      method: 'get',
+      success: (res) => {
+        console.log(res)
+        const data = res.data || {}
+        this.setData({
+          categories: data.categories,
+          infoDetails: data.infoDetails,
+          infoJson: data.infoJson,
+        })
+
+        setTimeout(() => {
+          this.initScroll()
+        }, 100);
+      }
+    })
+  },
+  initScroll() {
+
+    const query = wx.createSelectorQuery().in(this);
+
+    query
+      .selectAll('.title')
+      .boundingClientRect((rects) => {
+        this.offsetTopList = rects.map((item) => item.top);
+      })
+      .exec();
   },
   onScroll(e) {
     const {
