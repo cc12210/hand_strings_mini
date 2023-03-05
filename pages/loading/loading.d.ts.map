@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/loading/loading.ts"],"names":[],"mappings":"","file":"loading.d.ts","sourcesContent":["Page({\n  goToProgress() {\n    wx.redirectTo({\n      url: '/pages/loading/loadingProgress/index',\n    });\n  },\n});\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/result/result.ts"],"names":[],"mappings":"","file":"result.d.ts","sourcesContent":["Page({\n  goResultPage() {\n    wx.navigateTo({ url: './result-page' });\n  },\n});\n"]}

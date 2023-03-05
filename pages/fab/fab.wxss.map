@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/fab/fab.less"],"names":[],"mappings":"AAAA;EACE,sBAAA;;AAGF;EACE,gBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n\n.wrapper {\n  padding: 0 32rpx;\n}\n"],"file":"fab.wxss"}

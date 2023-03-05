@@ -1,8 +1,0 @@
-.custom-left {
-  padding-left: 32rpx;
-}
-
-.custom-image {
-  height: 48rpx;
-  width: 204rpx;
-}

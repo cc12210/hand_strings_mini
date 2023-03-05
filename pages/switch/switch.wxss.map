@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/switch/switch.less"],"names":[],"mappings":"AAAA;EACE,wBAAA","sourcesContent":["page {\n  --td-cell-height: 112rpx;\n}\n"],"file":"switch.wxss"}

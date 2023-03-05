@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/cell-group/cell-group.ts"],"names":[],"mappings":"AAAA,IAAI,CAAC;IACH,IAAI,EAAE,EAAE;CACT,CAAC,CAAC","file":"cell-group.js","sourcesContent":["Page({\n  data: {},\n});\n"]}

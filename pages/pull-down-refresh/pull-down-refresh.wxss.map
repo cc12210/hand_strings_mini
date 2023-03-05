@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/pull-down-refresh/pull-down-refresh.less"],"names":[],"mappings":"AAAA;EACE,sBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n"],"file":"pull-down-refresh.wxss"}

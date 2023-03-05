@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/indexes/indexes.ts"],"names":[],"mappings":"","file":"indexes.d.ts","sourcesContent":["Page({\n  toBase() {\n    wx.navigateTo({ url: '/pages/indexes/base/index' });\n  },\n  toCustom() {\n    wx.navigateTo({ url: '/pages/indexes/custom/index' });\n  },\n});\n"]}

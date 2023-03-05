@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/radio/radio.less"],"names":[],"mappings":"AAAA;EACE,+BAAA;;AAGF;EACE,gBAAA;;AAEF;EACE,aAAA","sourcesContent":[".t-radio-padding {\n  padding: 24rpx 32rpx !important;\n}\n\n.t-radio-demo {\n  margin-top: 16px;\n}\n.disable-border {\n  display: none;\n}\n"],"file":"radio.wxss"}

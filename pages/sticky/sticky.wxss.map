@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/sticky/sticky.less"],"names":[],"mappings":"AAAA;EACE,eAAA","sourcesContent":[".tdesign-demo-sticky-base {\n  height: 3000rpx;\n}\n"],"file":"sticky.wxss"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/transition/transition.ts"],"names":[],"mappings":"","file":"transition.d.ts","sourcesContent":["Page({\n  data: {\n    visible: false,\n  },\n\n  onTriggerClick() {\n    this.setData({\n      visible: !this.data.visible,\n    });\n  },\n});\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/cell-group/cell-group.ts"],"names":[],"mappings":"","file":"cell-group.d.ts","sourcesContent":["Page({\n  data: {},\n});\n"]}

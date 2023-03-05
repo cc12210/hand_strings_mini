@@ -1,9 +1,0 @@
-.loading-container-flex {
-  display: flex;
-  align-items: center;
-}
-
-.wrapper {
-  min-width: 20%;
-  margin-right: 40rpx;
-}

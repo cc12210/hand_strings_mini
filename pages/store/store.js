@@ -3,7 +3,7 @@ const cateList = require('./categories')
 Page({
   offsetTopList: [],
   data: {
-    showPersonInfo: false,
+    showPersonInfo: true,
     sideBarIndex: 1,
     scrollTop: 0,
     categories: cateList.categories,
@@ -39,5 +39,11 @@ Page({
     if (index > -1) {
       this.setData({ sideBarIndex: index });
     }
+  },
+  onVisibleChange(e) {
+    const visible = e.detail.visible
+    this.setData({
+        showPersonInfo: visible
+    })
   },
 });

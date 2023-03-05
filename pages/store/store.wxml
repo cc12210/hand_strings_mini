@@ -66,7 +66,7 @@
     </view>
 
     <!-- 个人弹层 -->
-    <t-popup visible="{{showPersonInfo}}" placement="bottom">
+    <t-popup visible="{{showPersonInfo}}" placement="bottom" bind:visible-change="onVisibleChange">
         <view class="details-info-popup">
             测试
         </view>

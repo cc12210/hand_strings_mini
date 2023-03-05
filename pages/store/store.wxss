@@ -177,3 +177,11 @@
     height: 100%;
     border-radius: 20rpx;
 }
+
+.details-info-popup {
+    min-height: 800rpx;
+    background: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    box-sizing: border-box;
+    padding: 20rpx;
+}

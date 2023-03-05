@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../example/pages/fab/fab.ts"],"names":[],"mappings":"","file":"fab.d.ts","sourcesContent":["Page({\n  data: {\n    type: 'base',\n  },\n  handleChange(e) {\n    this.setData({\n      type: e.target.dataset.type,\n    });\n  },\n});\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/grid/grid.less"],"names":[],"mappings":"AAAA,IACE;EACE,iBAAA;EACA,gBAAA;;AAHJ,IAME;EACE,eAAA","sourcesContent":["page {\n  .demo {\n    min-height: 100vh;\n    overflow: hidden;\n  }\n\n  .demo-section__wrapper {\n    margin: 32rpx 0;\n  }\n}\n"],"file":"grid.wxss"}

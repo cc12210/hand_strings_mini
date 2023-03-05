@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/popup/popup.less"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,qBAAA","sourcesContent":["page {\n  background: #fff;\n  padding-bottom: 48rpx;\n}\n"],"file":"popup.wxss"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/button/button.less"],"names":[],"mappings":"AAAA;EACE,sBAAA","sourcesContent":["page {\n  background-color: #fff;\n}\n"],"file":"button.wxss"}

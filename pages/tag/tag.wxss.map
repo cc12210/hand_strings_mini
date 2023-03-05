@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/tag/tag.less"],"names":[],"mappings":"AAAA;EACE,gBAAA;;AAGF,MAAM,IAAI;EACR,mBAAA;;AAGF,MAAO;EACL,mBAAA","sourcesContent":["page {\n  background: #fff;\n}\n\n.t-tag:not(:last-child) {\n  margin-right: 32rpx;\n}\n\n.block .t-tag {\n  margin-right: 16rpx;\n}\n"],"file":"tag.wxss"}
